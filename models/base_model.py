@@ -7,7 +7,8 @@ from datetime import datetime
 
 
 
-class baseModel:
+
+class BaseModel:
     """this is class BaseModel"""
     
     def __init__(self):
@@ -26,7 +27,7 @@ class baseModel:
         """updates the public instance attribute 
         updated_at with the current datetime"""
 
-        self.updated_at = date_time.now()
+        self.updated_at = datetime.now()
 
 
     def to_dict(self):
