@@ -11,7 +11,7 @@ from datetime import datetime
 class BaseModel:
     """this is class BaseModel"""
     
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
         """constructor"""
 
         if kwargs:
