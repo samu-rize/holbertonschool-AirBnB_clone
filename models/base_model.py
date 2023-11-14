@@ -14,11 +14,6 @@ class BaseModel:
     def __init__(self):
         """constructor"""
 
-        self.id = str(uuid.uuid4())
-        self.created_at = datetime.now()
-        self.updated_at = datetime.now()
-
-
         if kwargs:
             for k, v in kwargs.items():
                 if k != "__class__":
@@ -29,7 +24,6 @@ class BaseModel:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
-            storage.new(self)
 
 
     
