@@ -14,6 +14,8 @@ class BaseModel:
     def __init__(self, *args, **kwargs):
         """constructor"""
 
+    from models import storage
+
         if kwargs:
             for k, v in kwargs.items():
                 if k != "__class__":
@@ -36,12 +38,17 @@ class BaseModel:
         """updates the public instance attribute 
         updated_at with the current datetime"""
 
+         from models import storage
+
         self.updated_at = datetime.now()
+        storage.save()
+
 
 
     def to_dict(self):
         """eturns a dictionary containing all keys/values of
           __dict__ of the instance:"""
+        
         new_dict = self.__dict__.copy()
         new_dict["__class__"] = self.__class__.__name__
         new_dict["created_at"] = self.created_at.isoformat()
