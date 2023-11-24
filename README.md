@@ -104,5 +104,5 @@ $
 
 - [@hakimbouharb](https://www.github.com/hakimbouharb)
 
-- [@sumurize](https://www.github.com/sumu-rize)
+- [@sumurize](https://www.github.com/samu-rize)
 
