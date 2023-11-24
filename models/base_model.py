@@ -1,5 +1,5 @@
 #!usr/bin/python3
-"""Write a class BaseModel that defines all 
+"""Write a class BaseModel that defines all
 common attributes/methods for other classes:"""
 
 import uuid
@@ -8,7 +8,7 @@ from datetime import datetime
 
 class BaseModel:
     """this is class BaseModel"""
-    
+
     def __init__(self, *args, **kwargs):
         """constructor"""
 
@@ -30,33 +30,22 @@ class BaseModel:
         """should print: [<class name>] (<self.id>) <self.__dict__>"""
         return "[{}] ({}) {}".format(
             self.__class__.__name__, self.id, self.__dict__)
-    
+
     def save(self):
-        """updates the public instance attribute 
+        """updates the public instance attribute
         updated_at with the current datetime"""
 
         from models import storage
 
         self.updated_at = datetime.now()
         storage.save()
-        
-
 
     def to_dict(self):
         """eturns a dictionary containing all keys/values of
           __dict__ of the instance:"""
-        
+
         new_dict = self.__dict__.copy()
         new_dict["__class__"] = self.__class__.__name__
         new_dict["created_at"] = self.created_at.isoformat()
         new_dict["updated_at"] = self.updated_at.isoformat()
         return new_dict
-        
-
-
-
-
-
-
-
-        
