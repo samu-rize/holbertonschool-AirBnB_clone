@@ -6,7 +6,6 @@ import uuid
 from datetime import datetime
 
 
-
 class BaseModel:
     """this is class BaseModel"""
     
@@ -29,7 +28,7 @@ class BaseModel:
 
     def __str__(self):
         """should print: [<class name>] (<self.id>) <self.__dict__>"""
-        return "".format(
+        return "[{}] ({}) {}".format(
             self.__class__.__name__, self.id, self.__dict__)
     
     def save(self):
@@ -40,7 +39,7 @@ class BaseModel:
 
         self.updated_at = datetime.now()
         storage.save()
-
+        
 
 
     def to_dict(self):
