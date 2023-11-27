@@ -37,7 +37,7 @@ class HBNBCommand(cmd.Cmd):
         args = line.split(" ")
         if len(line) < 1:
             print("** class name missing **")
-        elif args[0] not in self.classes
+        elif args[0] not in self.classes:
             print("** class doesn't exist **")
         else:
             inst = eval(args[0])()
@@ -51,7 +51,7 @@ class HBNBCommand(cmd.Cmd):
 
         if len(line) < 1:
             print("** class name missing **")
-        elif args[0] not in self.classes
+        elif args[0] not in self.classes:
             print("** class doesn't exist **")
         elif len(args) == 1:
             print("** instance id missing **")
@@ -69,7 +69,7 @@ class HBNBCommand(cmd.Cmd):
 
         if len(line) < 1:
             print("** class name missing **")
-        elif args[0] not in self.classes
+        elif args[0] not in self.classes:
             print("** class doesn't exist **")
         elif len(args) == 1:
             print("** instance id missing **")
@@ -86,7 +86,7 @@ class HBNBCommand(cmd.Cmd):
         """Prints all string representation of
         all instances based on the class name or not"""
         args = line.split(" ")
-        if len(line) == 2 and args[0] not in self.classes
+        if len(line) == 2 and args[0] not in self.classes:
             print("** class doesn't exist **")
         else:
             obj_dict = storage.all()
@@ -100,7 +100,7 @@ class HBNBCommand(cmd.Cmd):
 
         if len(line) < 1:
             print("** class name missing **")
-        elif args[0] not in self.classes
+        elif args[0] not in self.classes:
             print("** class doesn't exist **")
         elif len(args) == 1:
             print("** instance id missing **")
