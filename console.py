@@ -98,7 +98,7 @@ class HBNBCommand(cmd.Cmd):
         name and id by adding or updating attribute"""
         args = line.split(" ")
 
-        if len(line) < 1:
+        if len(args) == 0:
             print("** class name missing **")
         elif args[0] not in self.classes:
             print("** class doesn't exist **")
