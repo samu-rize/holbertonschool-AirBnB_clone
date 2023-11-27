@@ -11,10 +11,19 @@ from models.city import City
 from models.amenity import Amenity
 from models.review import Review
 
+
 class HBNBCommand(cmd.Cmd):
     """this is the class"""
     prompt = "(hbnb) "
-    classes= ["BaseModel", "User", "Place", "State", "City", "Amenity", "Review"]
+    classes = [
+        "BaseModel",
+        "User",
+        "Place",
+        "State",
+        "City",
+        "Amenity",
+        "Review"]
+
     def do_quit(self, line):
         """exit the program"""
         return True
