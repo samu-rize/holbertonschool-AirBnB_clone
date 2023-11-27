@@ -100,7 +100,7 @@ class HBNBCommand(cmd.Cmd):
 
         if len(line) < 1:
             print("** class name missing **")
-        elif args[0] != "BaseModel":
+        elif args[0] not in self.classes
             print("** class doesn't exist **")
         elif len(args) == 1:
             print("** instance id missing **")
