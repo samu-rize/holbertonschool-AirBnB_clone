@@ -3,6 +3,13 @@ header {
     height: 70px;
     width: 100%;
     border-bottom: 1px solid #CCCCCC;
-    margin-left: 20px;
+    position: absolute;
+}
+
+header .Pic {
     background: url(../images/hbnb_logo.png) no-repeat;
+    height: 60px;
+    width: auto;
+    margin-left: 20px;
+    margin-top: 5px;
 }
